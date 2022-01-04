@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.piano {
+			position: absolute;
+			top: 0;
+			left: 0;            
+			width: 600px;
+			height: 200px;
+			background-color: #000;
+		}
+		.white {
+			position: absolute;
+			border: 1px solid #000;
+			background-color: #fff;
+			height: 200px;
+			width: 75px;
+		}
+		.black {
+			position: absolute;
+			border: 1px solid #000;
+			background-color: #000;
+			height: 125px;
+			width: 60px;
+		}
+		#one {
+			left: 0;
+		}
+		#two {
+			left: 75px;            
+		}
+		#three {
+			left: 150px;            
+		}
+		#four {
+			left: 225px;            
+		}
+		#five {
+			left: 300px;            
+		}
+		#six {
+			left: 375px;            
+		}
+		#seven {
+			left: 450px;            
+		}
+		#eight {
+			left: 525px;            
+		}
+		#nine {
+			left: 37.5px;            
+		}
+		#ten {
+			left: 112.5px;            
+		}
+		#eleven {
+			left: 262.5px;            
+		}
+		#twelve {
+			left: 337.5px;            
+		}
+		#thirteen {
+			left: 412.5px;            
+		}
+	</style>
+</head>
+<body>
+	<script>
+		const play = key => {
+			const audio = document.createElement('audio')
+			console.log(audio)
+			audio.src = key + '.mp3'
+			audio.play()
+		}
+
+		document.addEventListener('keydown', event => {
+			console.log(event)
+			const keyMap = {
+				a: 'one',
+				s: 'two',
+				d: 'three',
+				f: 'four',
+				g: 'five',
+				h: 'six',
+				j: 'seven',
+				k: 'eight'
+			}
+			play(keyMap[event.key])
+		})
+	</script>
+	<div class="piano">
+		<div class="white" onclick="play('one')" id="one"></div>
+		<div class="white" onclick="play('two')" id="two"></div>
+		<div class="white" onclick="play('three')" id="three"></div>
+		<div class="white" onclick="play('four')" id="four"></div>
+		<div class="white" onclick="play('five')" id="five"></div>
+		<div class="white" onclick="play('six')" id="six"></div>
+		<div class="white" onclick="play('seven')" id="seven"></div>
+		<div class="white" onclick="play('eight')" id="eight"></div>
+		<div class="black" onclick="play('one')" id="nine"></div>
+		<div class="black" onclick="play('one')" id="ten"></div>
+		<div class="black" onclick="play('one')" id="eleven"></div>
+		<div class="black" onclick="play('one')" id="twelve"></div>
+		<div class="black" onclick="play('one')" id="thirteen"></div>
+	</div>
+</body>
+</html>
