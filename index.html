@@ -107,63 +107,68 @@
 		}
 
 		document.addEventListener('keydown', event => {
+			event.preventDefault()
 			console.log(event)
 			const keyMap = {
-				KeyA: 'c3',
-				KeyW: 'c3p',
-				KeyS: 'd3',
-				KeyE: 'd3p',
-				KeyD: 'e3',
-				KeyF: 'f3',
-				KeyT: 'f3p',
-				KeyG: 'g3',
-				KeyY: 'g3p',
-				KeyH: 'a3',
-				KeyU: 'a3p',
-				KeyJ: 'b3',
-				KeyK: 'c4',
-				KeyO: 'c4p',
-				KeyL: 'd4',
-				KeyP: 'd4p',
-				Semicolon: 'e4',
-				Quote: 'f4',
-				BracketRight: 'f4p',
-				Enter: 'g4'
+				Tab: 'c3',
+				1: 'c3p',
+				q: 'd3',
+				2: 'd3p',
+				w: 'e3',
+				e: 'f3',
+				4: 'f3p',
+				r: 'g3',
+				5: 'g3p',
+				t: 'a3',
+				6: 'a3p',
+				y: 'b3',
+				u: 'c4',
+				8: 'c4p',
+				i: 'd4',
+				9: 'd4p',
+				o: 'e4',
+				p: 'f4',
+				'-': 'f4p',
+				'[': 'g4',
+				'=': 'g4p',
+				']': 'a4',
+				Backspace: 'a4p',
+				'\\': 'b4'
 			}
-			if(!keyMap[event.code]) {
+			if(!keyMap[event.key]) {
 				return
 			}
-			play(keyMap[event.code])
+			play(keyMap[event.key])
 		})
 	</script>
 </head>
 <body>
 	<div>
-		<div class="white c3" onclick="play('c3')"></div>
-		<div class="black c3p" onclick="play('c3p')"></div>
-		<div class="white d3" onclick="play('d3')"></div>
-		<div class="black d3p" onclick="play('d3p')"></div>
-		<div class="white e3" onclick="play('e3')"></div>
-		<div class="white f3" onclick="play('f3')"></div>
-		<div class="black f3p" onclick="play('f3p')"></div>
-		<div class="white g3" onclick="play('g3')"></div>
-		<div class="black g3p" onclick="play('g3p')"></div>
-		<div class="white a3" onclick="play('a3')"></div>
-		<div class="black a3p" onclick="play('a3p')"></div>
-		<div class="white b3" onclick="play('b3')"></div>
-		<div class="white c4" onclick="play('c4')"></div>
-		<div class="black c4p" onclick="play('c4p')"></div>
-		<div class="white d4" onclick="play('d4')"></div>
-		<div class="black d4p" onclick="play('d4p')"></div>
-		<div class="white e4" onclick="play('e4')"></div>
-		<div class="white f4" onclick="play('f4')"></div>
-		<div class="black f4p" onclick="play('f4p')"></div>
-		<div class="white g4" onclick="play('g4')"></div>
-		<div class="black g4p" onclick="play('g4p')"></div>
-		<div class="white a4" onclick="play('a4')"></div>
-		<div class="black a4p" onclick="play('a4p')"></div>
-		<div class="white b4" onclick="play('b4')"></div>
-		<div class="white c5" onclick="play('c5')"></div>
+		<div class="black" id="c3p" onclick="play('c3p')"></div>
+		<div class="white" id="c3" onclick="play('c3')"></div>
+		<div class="white" id="d3" onclick="play('d3')"></div>
+		<div class="black" id="d3p" onclick="play('d3p')"></div>
+		<div class="white" id="e3" onclick="play('e3')"></div>
+		<div class="white" id="f3" onclick="play('f3')"></div>
+		<div class="black" id="f3p" onclick="play('f3p')"></div>
+		<div class="white" id="g3" onclick="play('g3')"></div>
+		<div class="black" id="g3p" onclick="play('g3p')"></div>
+		<div class="white" id="a3" onclick="play('a3')"></div>
+		<div class="black" id="a3p" onclick="play('a3p')"></div>
+		<div class="white" id="b3" onclick="play('b3')"></div>
+		<div class="white" id="c4" onclick="play('c4')"></div>
+		<div class="black" id="c4p" onclick="play('c4p')"></div>
+		<div class="white" id="d4" onclick="play('d4')"></div>
+		<div class="black" id="d4p" onclick="play('d4p')"></div>
+		<div class="white" id="e4" onclick="play('e4')"></div>
+		<div class="white" id="f4" onclick="play('f4')"></div>
+		<div class="black" id="f4p" onclick="play('f4p')"></div>
+		<div class="white" id="g4" onclick="play('g4')"></div>
+		<div class="black" id="g4p" onclick="play('g4p')"></div>
+		<div class="white" id="a4" onclick="play('a4')"></div>
+		<div class="black" id="a4p" onclick="play('a4p')"></div>
+		<div class="white" id="b4" onclick="play('b4')"></div>
+		<div class="white" id="c5" onclick="play('c5')"></div>
 	</div>
 </body>
 </html>
